@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi aplicación CRUD</title>
+  </head>
+  <body>
+    <h1>Editar elemento {{ item.id }}</h1>
+    <form action="{{ url_for('update', id=item.id) }}" method="post">
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" value="{{ item.nombre }}">
+      </div>
+      <div>
+        <label for="descripcion">Descripción:</label>
+        <textarea name="descripcion" id="descripcion">{{ item.descripcion }}</textarea>
+      </div>
+      <button type="submit">Guardar cambios</button>
+    </form>
+    <a href="{{ url_for('read', id=item.id) }}">Cancelar</a>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi aplicación CRUD</title>
+  </head>
+  <body>
+    <h1>Ver elemento {{ item.id }}</h1>
+    <div>
+      <label>Nombre:</label>
+      <p>{{ item.nombre }}</p>
+    </div>
+    <div>
+      <label>Descripción:</label>
+      <p>{{ item.descripcion }}</p>
+    </div>
+    <a href="{{ url_for('update', id=item.id) }}">Editar</a>
+    <a href="{{ url_for('delete', id=item.id) }}">Eliminar</a>
+    <a href="{{ url_for('index') }}">Volver al listado</a>
+  </body>
+</html>

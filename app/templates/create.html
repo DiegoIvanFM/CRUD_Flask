@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi aplicación CRUD</title>
+  </head>
+  <body>
+    <h1>Crear nuevo elemento</h1>
+    <form action="{{ url_for('create') }}" method="post">
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre">
+      </div>
+      <div>
+        <label for="descripcion">Descripción:</label>
+        <textarea name="descripcion" id="descripcion"></textarea>
+      </div>
+      <button type="submit">Crear</button>
+    </form>
+    <a href="{{ url_for('index') }}">Volver al listado</a>
+  </body>
+</html>

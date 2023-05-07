@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi aplicación CRUD</title>
+  </head>
+  <body>
+    <h1>Eliminar elemento {{ item.id }}</h1>
+    <p>¿Está seguro que desea eliminar el elemento "{{ item.nombre }}"?</p>
+    <form action="{{ url_for('delete', id=item.id) }}" method="post">
+      <button type="submit">Eliminar</button>
+      <a href="{{ url_for('read', id=item.id) }}">Cancelar</a>
+    </form>
+  </body>
+</html>
